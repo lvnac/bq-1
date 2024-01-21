@@ -1,0 +1,48 @@
+// Funciones para interactividad general, como menús desplegables y manejo de eventos
+
+// Función para manejar menús desplegables
+function toggleDropdown(dropdownId) {
+    var element = document.getElementById(dropdownId);
+    element.classList.toggle("show");
+}
+
+// Añadir evento de escucha para cerrar menús desplegables cuando se hace clic en otro lugar
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
+
+// Funciones para la interacción específica de la tienda, como agregar al carrito
+
+// Función para agregar un producto al carrito
+function addToCart(productId) {
+    // Lógica para agregar el producto al carrito
+    // Esto podría implicar una llamada a una API o la actualización de un elemento en la página
+    console.log("Producto añadido al carrito:", productId);
+    // Actualizar visualmente el carrito en la página, si es necesario
+}
+
+// Funciones para validación de formularios, como el formulario de contacto
+
+// Función para validar el formulario de contacto
+function validateContactForm() {
+    var name = document.forms["contactForm"]["name"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var message = document.forms["contactForm"]["message"].value;
+
+    if (name == "" || email == "" || message == "") {
+        alert("Todos los campos son obligatorios.");
+        return false;
+    }
+    // Más validaciones según sea necesario
+    return true;
+}
+
+// Puedes añadir más funciones JavaScript según las necesidades específicas de tu sitio
