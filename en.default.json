@@ -1,0 +1,27 @@
+{
+  "general": {
+    "404": {
+      "title": "Not found",
+      "subtext_html": "The page you were looking for does not exist"
+    },
+    "500": {
+      "title": "Error",
+      "subtext_html": "There was an error processing your request"
+    },
+    "search": {
+      "title": "Search",
+      "placeholder": "Search products...",
+      "no_results": "No results found"
+    },
+    "buttons": {
+      "add_to_cart": "Add to Cart",
+      "buy_now": "Buy Now",
+      "continue_shopping": "Continue Shopping"
+    },
+    "footer": {
+      "newsletter_heading": "Stay Updated",
+      "newsletter_subtext": "Subscribe to our newsletter for latest updates"
+    }
+    // Aquí puedes seguir agregando otras secciones y mensajes según sea necesario
+  }
+}
