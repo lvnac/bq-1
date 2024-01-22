@@ -1,0 +1,23 @@
+<div class="product-card">
+  <a href="{{ product_product.url }}" class="product-image-link">
+    {% if product_product.featured_image %}
+      <img src="{{ product_product.featured_image | img_url: 'medium' }}" alt="{{ product_product.featured_image.alt | escape }}">
+    {% else %}
+      {{ 'No image available' | placeholder_svg_tag: 'placeholder-svg' }}
+    {% endif %}
+  </a>
+  
+  <div class="product-details">
+    <p class="product-vendor">{{ product_product.vendor }}</p>
+    <h2 class="product-title">
+      <a href="{{ product_product.url }}">{{ product_product.title }}</a>
+    </h2>
+    <p class="product-price">{{ product_product.price | money }}</p>
+
+    {% if product_product.available %}
+      <a href="{{ product_product.url }}" class="product-add-to-cart">Add to Cart</a>
+    {% else %}
+      <p class="product-out-of-stock">Out of Stock</p>
+    {% endif %}
+  </div>
+</div>
