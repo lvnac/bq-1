@@ -1,0 +1,10 @@
+.page-title {
+    font-size: 2em;
+    color: #333;
+}
+
+.page-content {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+}
