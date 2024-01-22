@@ -1,0 +1,36 @@
+<!-- Título de la sección -->
+<h1 class="section-title">{{ section.settings.title }}</h1>
+
+<!-- Listado de colecciones -->
+<div class="collections-list">
+  {% for collection in collections %}
+    {% if collection.all_products_count > 0 %}
+      <div class="collection-item">
+        <a href="{{ collection.url }}" class="collection-link">
+          {% if collection.featured_image != blank %}
+            {% assign collection_image = collection.featured_image %}
+          {% else %}
+            {% assign collection_image = collection.products.first.image %}
+          {% endif %}
+          <img src="{{ collection_image | img_url: 'medium' }}" alt="{{ collection.title | escape }}" class="collection-image">
+        </a>
+        <h2 class="collection-title">{{ collection.title }}</h2>
+      </div>    
+    {% endif %}
+  {% endfor %}
+</div>
+
+<!-- Esquema de configuración -->
+{% schema %}
+{
+  "name": "Template List Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Nuestras Colecciones",
+      "label": "Título de la Sección"
+    }
+  ]
+}
+{% endschema %}
