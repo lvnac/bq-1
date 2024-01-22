@@ -18,7 +18,7 @@
           <span class="compare-price">{{ selected_variant.compare_at_price | money }}</span>
           <span class="selling-price">{{ selected_variant.price | money }}</span>
           {% if selected_variant.price < selected_variant.compare_at_price %}
-            <span class="sale-badge">En Oferta</span>
+            <span class="sale-badge">On Sale</span>
           {% endif %}
         </div>
       {% when 'variant_selector' %}
@@ -38,20 +38,20 @@
           </variant-selector>
         {% endunless %}
       {% when 'quantity' %}
-        <label for="quantity-{{ section.id }}">Cantidad</label>
+        <label for="quantity-{{ section.id }}">Quantity</label>
         <input type="number" name="quantity" id="quantity-{{ section.id }}" value="1" min="1" class="quantity-input">
       {% when 'description' %}
         <p class="product-description">{{ product.description }}</p>
       {% when 'checkout_buttons' %}
         <button type="submit" name="add" class="add-to-cart-button" {% if selected_variant.available == false %} disabled {% endif %}>
           {% if selected_variant.available == false %}
-              Agotado
+              Sold Out
           {% else %}
-              Añadir al Carrito
+              Add to Cart
           {% endif %}
         </button>
       {% else %}
-        <!-- Otros tipos de bloques pueden ser añadidos aquí -->
+        <!-- Other types of blocks can be added here -->
     {% endcase %}
   {% endfor %}
 {% endform %}
