@@ -45,4 +45,4 @@ function validateContactForm() {
     return true;
 }
 
-// Puedes añadir más funciones JavaScript según las necesidades específicas de tu sitio
+//
