@@ -1,0 +1,76 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+/* Estilos para el Producto */
+.product-vendor {
+    font-size: 1.2em;
+    color: #7B1E2A;
+}
+
+.product-title {
+    font-size: 2em;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.compare-price {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.selling-price {
+    color: #7B1E2A;
+}
+
+.sale-badge {
+    background-color: #7B1E2A;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.variant-selector {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.quantity-input {
+    width: 50px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-description {
+    margin-top: 20px;
+}
+
+.add-to-cart-button {
+    background-color: #7B1E2A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+    background-color: #591E23;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768
