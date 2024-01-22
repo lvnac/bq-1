@@ -1,0 +1,41 @@
+/* Generic Theme Styles */
+:root {
+  --black: #1D1D1D;
+  --white: #FFFFFF;
+  --primary-bordo: #7B1E2A; /* Color bordó principal */
+  --secondary-bordo: #4A1C29; /* Color bordó secundario */
+  --gray: #F4F4F4;
+  --main-font: 'Times New Roman', serif; /* Fuente clásica */
+  --secondary-font: Helvetica, Arial, sans-serif; /* Fuente secundaria */
+}
+
+/* Estilos para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: #ececec;
+    --white: #1D1D1D;
+    --gray: #333333;
+  }
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--black);
+  background-color: var(--white);
+}
+
+header, footer {
+  background-color: var(--primary-bordo);
+  color: var(--white);
+}
+
+a {
+  color: var(--primary-bordo);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary-bordo);
+}
+
+/* Agrega aquí más estilos personalizados según sea necesario */
