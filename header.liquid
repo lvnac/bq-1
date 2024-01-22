@@ -1,0 +1,47 @@
+{% liquid 
+  if section.settings.menu != blank
+    assign main_menu_linklist = linklists[section.settings.menu].links
+  else
+    assign main_menu_linklist = linklists['main-menu'].links
+  endif
+%}
+
+<header id="header" class="header" style="background-color: #7B1E2A; color: white;">
+  <nav role="navigation" aria-label="Main Navigation">
+    <ul class="header-menu">
+      {% for link in main_menu_linklist %}
+        <li class="menu-item">
+          {% if link.links != blank %}
+            <a href="{{ link.url }}" class="dropdown-toggle">{{ link.title }}</a>
+            <ul class="dropdown-menu">
+              {% assign link_handle = link.handle | replace: '-', '_' %}
+              {% for childlink in link.links %}
+                <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+    <form action="{{ routes.search_url }}" method="get" class="search-form">
+      <input type="search" name="q" placeholder="Search" class="search-input">
+      <button type="submit" class="search-button">Search</button>
+    </form>
+  </nav>     
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Header Navigation Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
