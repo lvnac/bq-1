@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* Resto del código de reset/normalize que proporcionaste... */
+
+/* Estilos Personalizados para la Tienda de Robots */
+/* Definiendo colores principales */
+:root {
+  --color-primary: #7B1E2A; /* Color bordó principal */
+  --color-secondary: #4A1C29; /* Color bordó secundario */
+  --color-text: #333333; /* Color de texto principal */
+  --color-background: #ffffff; /* Color de fondo */
+}
+
+/* Aplicando colores y estilos personalizados */
+body {
+  font-family: 'Times New Roman', serif; /* Fuente clásica para un estilo más tradicional */
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+header, footer {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+a, button {
+  color: var(--color-primary);
+}
+
+a:hover, button:hover {
+  color: var(--color-secondary);
+}
+
+/* Estilos para encabezados: h1, h2, h3, etc. */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+}
+
+/* Estilos adicionales específicos para elementos de la tienda */
+/* Puedes añadir aquí más estilos personalizados según sea necesario */
+
+@media (prefers-reduced-motion: reduce) {
+  /* Resto del código de media query que proporcionaste... */
+}
