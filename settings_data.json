@@ -1,0 +1,44 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "color_scheme": "Classic",
+      "colors": {
+        "body": "#ffffff",
+        "text": "#4A1C29",
+        "heading": "#7B1E2A",
+        "button": "#7B1E2A",
+        "button_text": "#ffffff",
+        "footer_background": "#4A1C29",
+        "footer_text": "#ffffff"
+      },
+      "typography": {
+        "base_font": "'Times New Roman', serif",
+        "heading_font": "'Georgia', serif",
+        "base_size": "16px",
+        "heading_size": "28px"
+      },
+      "header": {
+        "logo_max_width": "200px",
+        "sticky": true,
+        "menu_font": "16px"
+      },
+      "footer": {
+        "show_payment_icons": true,
+        "show_social_icons": true,
+        "layout": "classic"
+      },
+      "homepage": {
+        "show_featured_products": true,
+        "number_of_featured_products": 4,
+        "featured_collection": "robots"
+      },
+      "product_page": {
+        "show_quantity_selector": true,
+        "show_variant_labels": true,
+        "show_related_products": true
+      },
+      // Puedes agregar más configuraciones personalizadas aquí
+    }
+  }
+}
