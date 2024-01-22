@@ -1,9 +1,9 @@
 {% paginate search.results by 10 %}
   <div class="search-results">
-    <h1>Resultados de Búsqueda</h1>
+    <h1>Search Results</h1>
     {% if search.performed %}
       {% if search.results.size > 0 %}
-        <p>{{ search.results.size }} resultados para el término de búsqueda "{{ search.terms | escape }}"</p>
+        <p>{{ search.results.size }} results for the search term "{{ search.terms | escape }}"</p>
         <div class="results-list">
           {% for item in search.results %}
             {% case item.object_type %}
@@ -12,15 +12,15 @@
                   {% render 'product-card', product: item %}
                 </div>
               {% else %}
-                <!-- Aquí puedes manejar otros tipos de objetos si es necesario -->
+                <!-- Handle other types of objects if necessary -->
                 <div class="other-result">
-                  Otros resultados (por ejemplo, artículos de blog o páginas).
+                  Other results (e.g., blog articles or pages).
                 </div>
               {% endcase %}
           {% endfor %}
         </div>
       {% else %}
-        <p>No se encontraron resultados para el término de búsqueda: "{{ search.terms | escape }}".</p>
+        <p>No results found for the search term: "{{ search.terms | escape }}".</p>
       {% endif %}
     {% endif %}
     <div class="pagination">
