@@ -1,7 +1,7 @@
-<!-- Título de la sección -->
+<!-- Section Title -->
 <h1 class="section-title">{{ section.settings.title }}</h1>
 
-<!-- Listado de colecciones -->
+<!-- Collections List -->
 <div class="collections-list">
   {% for collection in collections %}
     {% if collection.all_products_count > 0 %}
@@ -20,7 +20,7 @@
   {% endfor %}
 </div>
 
-<!-- Esquema de configuración -->
+<!-- Schema Configuration -->
 {% schema %}
 {
   "name": "Template List Collections",
@@ -28,8 +28,8 @@
     {
       "type": "text",
       "id": "title",
-      "default": "Nuestras Colecciones",
-      "label": "Título de la Sección"
+      "default": "Our Collections",
+      "label": "Section Title"
     }
   ]
 }
